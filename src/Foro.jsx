@@ -1,6 +1,10 @@
+import { HomePage } from "./foro/pages"
 
 export const Foro = () => {
-  return (
-    <div>Foro</div>
-  )
+  
+    return (
+
+        <HomePage />
+
+    )
 }
