@@ -10,7 +10,7 @@ export const foroSlice = createSlice({
 
         addNewPost: ( state, action ) => {
 
-            state.posts.push(action.payload)
+            state.posts.unshift(action.payload)
             state.isSaving = true;
 
         },

@@ -5,16 +5,8 @@ import { useEffect } from "react";
 
 export const CardList = () => {
 
-    const { posts, isSaving } = useSelector(state => state.foro);
+    const { posts } = useSelector(state => state.foro);
 
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        
-        dispatch(resetReducer())
-      
-    }, [isSaving])
-    
     return (
 
         <div className="row">
@@ -25,6 +17,7 @@ export const CardList = () => {
                     key={ element.title } 
                     title={ element.title } 
                     textArea={ element.textArea }
+                    columClass={ posts.length }
                 />
             
             ))}

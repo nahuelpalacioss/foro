@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addNewPost } from "../../store/foro/foroSlice";
+import { addNewPost, resetReducer } from "../../store/foro/foroSlice";
 
 export const PostFormPage = () => {
 
@@ -37,9 +37,18 @@ export const PostFormPage = () => {
 
         event.preventDefault();
 
-        dispatch(addNewPost({ title, textArea }));
+        if(title.length > 1 && textArea.length > 10) {
 
-        navigate('/', { replace: true} );
+            dispatch(addNewPost({ title, textArea }));
+            dispatch(resetReducer());
+    
+            navigate('/', { replace: true} );
+
+        } else {
+
+            throw new Error("Ocurrió un error en el armado del post.")
+
+        }
 
     }
 
