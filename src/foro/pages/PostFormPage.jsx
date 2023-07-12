@@ -54,7 +54,13 @@ export const PostFormPage = () => {
 
     return (
         
-        <div className="container mt-3">
+        <div 
+            className="container mt-3" 
+            style={{ 
+                minHeight: "60vh", 
+                position: "relative" 
+            }}
+        >
             <form>
                 <div className="form-group">
                     <label htmlFor="formControlTitle">Título del post</label>

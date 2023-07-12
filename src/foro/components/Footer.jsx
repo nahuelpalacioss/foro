@@ -7,9 +7,7 @@ export const Footer = () => {
 
             <footer className="text-center text-lg-start" style={{ 
                     backgroundColor: "rgb(135, 81, 172)",
-                    position: "fixed",
-                    bottom: 0,
-                    width: "100%"
+                    width: "100%",
                 }}>
                 <div className="container d-flex justify-content-center py-5">
                   <button type="button" className="btn btn-primary btn-lg btn-floating mx-2" style={{ backgroundColor: "#54456b" }}>

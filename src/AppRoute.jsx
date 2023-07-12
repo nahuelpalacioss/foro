@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-import { HomePage, PostFormPage } from "./foro/pages"
+import { HomePage, PostFormPage, PostPage } from "./foro/pages"
 import { Footer, Navbar } from "./foro/components"
 
 
@@ -15,6 +15,8 @@ export const AppRoute = () => {
                 <Route path="/" element={ <HomePage /> } />
 
                 <Route path="/createPost" element={ <PostFormPage /> } />
+
+                <Route path="/post" element={ <PostPage /> } />
 
                 <Route path="/*" element={ <Navigate to="/"/> } />
 
