@@ -1,4 +1,4 @@
-import { Navbar, CardList, Pagination, Footer } from "../components";
+import { Navbar, CardList, Pagination } from "../components";
 
 export const HomePage = () => {
   
@@ -6,10 +6,7 @@ export const HomePage = () => {
 
         <div 
             className="container d-flex flex-column align-items-center justify-content-center" 
-            style={{ 
-                minHeight: "60vh", 
-                position: "relative"
-            }}
+            style={{ minHeight: "60vh"}}
         >
 
             <CardList />

@@ -56,10 +56,6 @@ export const PostFormPage = () => {
         
         <div 
             className="container mt-3" 
-            style={{ 
-                minHeight: "60vh", 
-                position: "relative" 
-            }}
         >
             <form>
                 <div className="form-group">

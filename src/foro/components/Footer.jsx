@@ -1,26 +1,48 @@
+/* Footer removed. Rewrite it.
+
 
 export const Footer = () => {
   
     return (
-        
-        <>
 
-            <footer className="text-center text-lg-start" style={{ 
-                    backgroundColor: "rgb(135, 81, 172)",
-                    width: "100%",
-                }}>
-                <div className="container d-flex justify-content-center py-5">
-                  <button type="button" className="btn btn-primary btn-lg btn-floating mx-2" style={{ backgroundColor: "#54456b" }}>
-                    <i className="bi bi-linkedin"></i>
-                  </button>
-                </div>
-                <div className="text-center text-white p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
-                  © 2023 Copyright: Nahuel Matias Palacios
-                </div>
-            </footer>
+      <footer class="bg-light text-center text-lg-start" style={{
 
-        </>
-  
+          position: "absolute",
+          bottom: 0,
+          width: "100%",
+          height: "0rem",
+      }}>
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Footer text</h5>
+    
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+              molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+              aliquam voluptatem veniam, est atque cumque eum delectus sint!
+            </p>
+          </div>
+    
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Footer text</h5>
+    
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+              molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+              aliquam voluptatem veniam, est atque cumque eum delectus sint!
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="text-center p-3">
+             © 2020 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+    </footer>
+
     )
 
 }
+*/
