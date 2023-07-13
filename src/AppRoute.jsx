@@ -9,16 +9,18 @@ export const AppRoute = () => {
         <>
             <Navbar />
 
-     
-
             <Routes>
+
                 <Route path="/" element={ <HomePage /> } />
+
                 <Route path="/createPost" element={ <PostFormPage /> } />
-                <Route path="/post" element={ <PostPage /> } />
+
+                <Route path="/posts/:postId" element={ <PostPage /> } />
+
                 <Route path="/*" element={ <Navigate to="/"/> } />
+
             </Routes>
 
-        
         </>
 
     )

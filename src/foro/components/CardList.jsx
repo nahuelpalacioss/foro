@@ -1,7 +1,5 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import { CardItem } from "./CardItem"
-import { resetReducer } from "../../store/foro/foroSlice";
-import { useEffect } from "react";
 
 export const CardList = () => {
 
@@ -14,13 +12,13 @@ export const CardList = () => {
             {posts.map((element) => (
                 
                 <CardItem 
-                    key={ element.title } 
+                    key={ element.id } 
                     title={ element.title } 
                     textArea={ element.textArea }
                     columClass={ posts.length }
-                />
-            
-            ))}
+                    postId={ element.id }
+                />))
+            }
         
         </div>
             

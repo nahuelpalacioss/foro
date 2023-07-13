@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom"
 
-export const CardItem = ({ title, textArea, columClass }) => {
-  
+export const CardItem = ({ title, textArea, columClass, postId }) => {
+
     return (
 
         <div className={
@@ -9,15 +10,20 @@ export const CardItem = ({ title, textArea, columClass }) => {
                 "col-lg-4 col-md-6 col-sm-12"
             }
         >
-            
-            <div className="card" style={{width: "18rem"}}>
+            <div 
+                className="card" 
+                style={{
+                    width: "18rem"
+                }}
+            >
                 <div className="card-body">
-                  <h5 className="card-title">{ title }</h5>
+                  <h5 className="card-title"> { title } </h5>
                   <p className="card-text"> { textArea } </p>
-                  <a href="#" className="btn btn-primary">Ir al post</a>
+                  <Link to={ `/posts/${ postId }` }>
+                    <button className="btn btn-primary"> Ir al post </button>
+                  </Link>
                 </div>
             </div>
-            
         </div>
     
     )

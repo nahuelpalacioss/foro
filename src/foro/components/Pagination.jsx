@@ -3,7 +3,12 @@ export const Pagination = () => {
 
     return (
 
-        <nav aria-label="Page navigation example" style={{ marginTop: "50px" }}>
+        <nav 
+            aria-label="Page navigation example" 
+            style={{ 
+                marginTop: "50px" 
+            }}
+        >
             <ul className="pagination">
               <li className="page-item"><a className="page-link" href="#">Previous</a></li>
               <li className="page-item"><a className="page-link" href="#">1</a></li>

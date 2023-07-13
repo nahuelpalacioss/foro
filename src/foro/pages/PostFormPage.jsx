@@ -1,56 +1,19 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addNewPost, resetReducer } from "../../store/foro/foroSlice";
+import { useForm } from "../hooks";
+import { onHandleSubmit } from "../helpers";
+
 
 export const PostFormPage = () => {
 
-    /* Quitarlo */
-
-    //States
-
-    const [title, setTitle] = useState("");
-
-    const [textArea, setTextArea] = useState("");
-
-    //Dispatch
+    const{ title, textArea, onInputChange } = useForm({
+        title:'',
+        textArea: ''
+    });
     
     const dispatch = useDispatch();
-
-    const navigate = useNavigate();
-
-    // Fun
-
-    const onTitleChange = ({target}) => {
-
-        setTitle(target.value);
-
-    };
-
-    const onTextAreaChange = ({target}) => {
-
-        setTextArea(target.value);
-
-    }
-
-    const onHandleSubmit = () => {
-
-        event.preventDefault();
-
-        if(title.length > 1 && textArea.length > 10) {
-
-            dispatch(addNewPost({ title, textArea }));
-            dispatch(resetReducer());
     
-            navigate('/', { replace: true} );
-
-        } else {
-
-            throw new Error("Ocurrió un error en el armado del post.")
-
-        }
-
-    }
+    const navigate = useNavigate();
 
     return (
         
@@ -59,29 +22,31 @@ export const PostFormPage = () => {
         >
             <form>
                 <div className="form-group">
-                    <label htmlFor="formControlTitle">Título del post</label>
+                    <label htmlFor="formControlTitle"> Título del post </label>
                     <input 
                         type="text" 
                         className="form-control" 
                         id="formControlTitle"
-                        onChange={ onTitleChange } 
+                        name="title"
+                        onChange={ onInputChange } 
                         value={ title }
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="formControlTextarea">Contenido del post</label>
+                    <label htmlFor="formControlTextarea"> Contenido del post </label>
                     <textarea 
                         className="form-control" 
                         id="formControlTextarea" 
                         rows="3"
-                        onChange={ onTextAreaChange }
+                        name="textArea"
+                        onChange={ onInputChange }
                         value={ textArea }
                     ></textarea>
                 </div>
                 <button 
                     type="submit" 
                     className="btn btn-primary"
-                    onClick={ onHandleSubmit }
+                    onClick={ () => onHandleSubmit(title, textArea, dispatch, navigate) }
                 >   Submit  </button>
             </form>
         </div>
